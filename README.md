@@ -68,4 +68,4 @@ Vetor 3: Dados ordenados decrescentemente (pior caso)
 
 ## Análise de Resultados
 
-![Descrição da Imagem](./caminho/para/graficoComparacao.png)
+![Comparação de Algoritmos de Ordenação](./graficoComparacao.png)
