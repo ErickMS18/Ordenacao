@@ -13,16 +13,16 @@ Este projeto Java propõe comparar o desempenho de diferentes algoritmos de orde
 ## Professor
 **Andrey Cabral Meira**
 
-## Alunos
+## Aluno
 - Erick Maestri de Souza (usuário: [ErickMS18](https://github.com/ErickMS18))
 
 ## Algoritmos Implementados
 ### 1. Comb Sort
-Descrição: Evolução do Bubble Sort que utiliza um gap para comparar elementos distantes
+Descrição: Evolução do Bubble Sort que utiliza um gap para comparar elementos distantes entre si
 
 Complexidade: O(n log n) na média, O(n²) no pior caso
 
-Característica: Elimina eficientemente "tartarugas" (elementos pequenos no final)
+Característica: Elimina eficientemente elementos pequenos que estão posicionados no final do array
 
 ### 2. Gnome Sort
 Descrição: Similar ao Insertion Sort, usando passos para frente e para trás
@@ -60,11 +60,11 @@ Complexidade: O(n²) na média e pior caso, O(n) no melhor caso
 Característica: Mais eficiente que Bubble Sort tradicional
 
 ## Cenários de Teste
-Vetor 1: Dados aleatórios (caso médio)
+Vetor 1: Dados aleatórios 
 
-Vetor 2: Dados ordenados crescentemente (melhor caso)
+Vetor 2: Dados ordenados crescentemente 
 
-Vetor 3: Dados ordenados decrescentemente (pior caso)
+Vetor 3: Dados ordenados decrescentemente 
 
 
 ## Resultados
