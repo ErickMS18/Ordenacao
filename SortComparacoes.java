@@ -115,52 +115,76 @@ public class SortComparacoes {
         return stats;
     }
 
-    // ------------------- Bucket Sort -------------------
-    public static SortStats bucketSort(int[] arr) {
-        int n = size(arr);
-        SortStats stats = new SortStats();
+ // ------------------- Bucket Sort -------------------
+public static SortStats bucketSort(int[] arr) {
+    int n = size(arr);
+    SortStats stats = new SortStats();
 
-        int M = sqrtInt(n) + 1;
-        int min = min(arr);
-        int max = max(arr);
-        int div = (max - min) / M + 1;
-
-        int[][] buckets = new int[M][n];
-        int[] bucketSizes = new int[M];
-
-        for (int i = 0; i < n; i++) {
-            int x = arr[i];
-            int idx = (x - min) / div;
-            if (idx >= M) idx = M - 1;
-            buckets[idx][bucketSizes[idx]] = x;
-            bucketSizes[idx]++;
-            stats.mov++;
-        }
-
-        int index = 0;
-        for (int i = 0; i < M; i++) {
-            int bi = bucketSizes[i];
-            for (int j = 1; j < bi; j++) {
-                int key = buckets[i][j];
-                int k = j - 1;
-                while (k >= 0) {
-                    stats.cmp++;
-                    if (buckets[i][k] > key) {
-                        buckets[i][k + 1] = buckets[i][k];
-                        stats.mov++;
-                        k--;
-                    } else break;
-                }
-                buckets[i][k + 1] = key;
-                stats.mov++;
-            }
-            for (int j = 0; j < bi; j++) {
-                arr[index++] = buckets[i][j];
-                stats.mov++;
-            }
-        }
-        return stats;
+    // Encontrar mínimo e máximo manualmente
+    int min = arr[0];
+    int max = arr[0];
+    for (int i = 1; i < n; i++) {
+        stats.cmp += 2; // Duas comparações no loop
+        if (arr[i] < min) min = arr[i];
+        if (arr[i] > max) max = arr[i];
     }
+
+    // Calcular número de baldes (sqrt(n))
+    int M = 1;
+    while (M * M <= n) {
+        M++;
+        stats.cmp++; // Comparação do while
+    }
+    M--;
+    if (M < 1) M = 1;
+
+    int div = (max - min) / M + 1;
+    if (div == 0) div = 1;
+
+    // Criar baldes
+    int[][] buckets = new int[M][n];
+    int[] bucketSizes = new int[M];
+
+    // DISTRIBUIÇÃO - NÃO conta como movimento
+    for (int i = 0; i < n; i++) {
+        int x = arr[i];
+        int idx = (x - min) / div;
+        if (idx >= M) idx = M - 1;
+        buckets[idx][bucketSizes[idx]] = x;
+        bucketSizes[idx]++;
+        // SEM stats.mov++ aqui - é apenas distribuição
+    }
+
+    int index = 0;
+    for (int i = 0; i < M; i++) {
+        int bi = bucketSizes[i];
+        
+        // ORDENAÇÃO INTERNA com Insertion Sort - CONTA movimentos e comparações
+        for (int j = 1; j < bi; j++) {
+            int key = buckets[i][j];
+            int k = j - 1;
+            while (k >= 0) {
+                stats.cmp++;
+                if (buckets[i][k] > key) {
+                    buckets[i][k + 1] = buckets[i][k];
+                    stats.mov++; // CONTA - movimento real de ordenação
+                    k--;
+                } else {
+                    break;
+                }
+            }
+            buckets[i][k + 1] = key;
+            stats.mov++; // CONTA - movimento real de ordenação
+        }
+        
+        // RECOLHIMENTO - NÃO conta como movimento
+        for (int j = 0; j < bi; j++) {
+            arr[index++] = buckets[i][j];
+            // SEM stats.mov++ aqui - é apenas recolhimento
+        }
+    }
+    return stats;
+}
 
     // ------------------- Bubble Sort com flag -------------------
     public static SortStats bubbleSortFlag(int[] arr) {
@@ -245,4 +269,5 @@ public class SortComparacoes {
         }
         return stats;
     }
+
 }
