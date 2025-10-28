@@ -1,8 +1,7 @@
-# Ordenacao
+# Comparativo de Algoritmos de Ordenação
 
 ## Descrição
-Este projeto Java propõe comparar o desempenho de diferentes algoritmos de ordenação. O sistema analisa métricas de desempenho como número de comparações e movimentações realizadas por cada algoritmo em diferentes cenários de dados, permitindo uma avaliação prática da eficiência de cada método.
-
+O sistema analisa métricas de desempenho como número de comparações e movimentações realizadas por cada algoritmo em diferentes cenários de dados, permitindo uma avaliação prática da eficiência de cada método.
 
 ## Instituição
 **PUCPR - Pontifícia Universidade Católica do Paraná**
@@ -14,7 +13,7 @@ Este projeto Java propõe comparar o desempenho de diferentes algoritmos de orde
 **Andrey Cabral Meira**
 
 ## Aluno
-- Erick Maestri de Souza (usuário: [ErickMS18](https://github.com/ErickMS18))
+- Erick Maestri de Souza 
 
 ## Algoritmos Implementados
 ### 1. Comb Sort
