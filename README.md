@@ -66,6 +66,4 @@ Vetor 2: Dados ordenados crescentemente (melhor caso)
 
 Vetor 3: Dados ordenados decrescentemente (pior caso)
 
-## Análise de Resultados
-
 ![Comparação de Algoritmos de Ordenação](./graficoComparacao.png)
