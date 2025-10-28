@@ -79,7 +79,9 @@ Vetor 3: Dados ordenados decrescentemente
 | 6º      | Selection sort       | 190          |
 
 ### Conclusão:
-O Vetor 1 possuí dados aleatórios, algoritmos de troca adjacente (Bubble, Gnome, Cocktail) mostraram alta ineficiência em movimentos. Selection sort foi o mais econômico em trocas, enquanto Comb sort equilibrou bem ambos os critérios. Bucket sort foi o melhor em comparações, destacando sua vantagem para dados com domínio limitado.
+O Vetor 1 possuí dados aleatórios, algoritmos de troca adjacente (Bubble, Gnome, Cocktail) mostraram alta ineficiência em movimentos. 
+Selection sort foi o mais econômico em trocas, enquanto Comb sort equilibrou bem ambos os critérios. 
+Bucket sort foi o melhor em comparações, destacando sua vantagem para dados com domínio limitado.
 
 ---
 
@@ -137,5 +139,5 @@ Bucket sort manteve sua eficiência com o menor número de comparações.
 
 ### Conclusão:
 O Vetor 3 está em ordem decrescente, representando o pior caso para algoritmos baseados em trocas adjacentes, como Bubble, Cocktail e Gnome sort, que realizaram o máximo de movimentos.  
-Selection sort e Comb sort mantiveram bom desempenho mesmo nesse cenário desfavorável, com poucas trocas e número previsível de comparações.  
-Bucket sort novamente apresentou excelente eficiência, com baixo número de comparações, sendo o mais consistente em todos os cenários.
+Selection sort e Comb sort mantiveram bom desempenho mesmo nesse cenário desfavorável, com poucas trocas e número razoável de comparações.  
+Bucket sort novamente apresentou excelente eficiência, com baixo número de comparações, sendo o mais consistente em todos os cenários de comparação.
