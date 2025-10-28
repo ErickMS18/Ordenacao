@@ -71,6 +71,10 @@ Vetor 3: Dados ordenados decrescentemente
 
 ![Comparação de Algoritmos de Ordenação](./graficoComparacao.png)
 
+---
+
 ![Comparação de Algoritmos de Ordenação](./graficoComparacao2.png)
+
+---
 
 ![Comparação de Algoritmos de Ordenação](./graficoComparacao3.png)
