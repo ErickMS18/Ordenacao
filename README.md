@@ -1,5 +1,3 @@
-# Comparativo de Algoritmos de Ordenação
-
 ## Descrição
 O sistema analisa métricas de desempenho como número de comparações e movimentações realizadas por cada algoritmo em diferentes cenários de dados, permitindo uma avaliação prática da eficiência de cada método.
 
@@ -14,6 +12,8 @@ O sistema analisa métricas de desempenho como número de comparações e movime
 
 ## Aluno
 - Erick Maestri de Souza 
+
+# Comparativo de Algoritmos de Ordenação
 
 ## Algoritmos Implementados
 ### 1. Comb Sort
